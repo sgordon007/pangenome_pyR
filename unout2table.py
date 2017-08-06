@@ -19,7 +19,6 @@ def unout2table(unout):
             # o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
     o1h.close()
 
-
 ########## end of initial analysis
 
 if __name__ == "__main__":
