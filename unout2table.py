@@ -12,8 +12,9 @@ def unout2table(unout):
     for line in input:
         if not '[' in line:
             lineList = line.rstrip().split()
-            out_list = [lineList[2], lineList[5], lineList[6], lineList[10], lineList[11]]
-            o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
+            print lineList[2]
+            # out_list = [lineList[2], lineList[5], lineList[6], lineList[10], lineList[11]]
+            # o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
     o1h.close()
 
 ########## end of initial analysis
