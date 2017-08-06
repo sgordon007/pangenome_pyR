@@ -11,10 +11,10 @@ def unout2table(unout):
     o1h = open(outFileName, 'w')
     for line in input:
         if not '[' in line:
-            lineList = line.rstrip().split()
-            print lineList[2]
-            # out_list = [lineList[2], lineList[5], lineList[6], lineList[10], lineList[11]]
-            # o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
+            lineList1 = line.rstrip().split(',')
+            lineList2 = line.rstrip().split()
+            out_list = [lineList1[2], lineList1[5], lineList2[0], lineList2[4], lineList2[5]]
+            o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
     o1h.close()
 
 ########## end of initial analysis
