@@ -11,7 +11,8 @@ def unout2table(unout):
     o1h = open(outFileName, 'w')
     for line in input:
         if not '[' in line:
-            lineList = (line.split()).rstrip()
+            lineList = line.split()
+            lineList = lineList.rstrip()
             out_list = [lineList[3], lineList[6], lineList[7], lineList[11], lineList[12]]
             o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
     o1h.close()
