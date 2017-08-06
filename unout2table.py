@@ -13,7 +13,7 @@ def unout2table(unout):
         if not '[' in line:
             lineList1 = line.rstrip().split(',')
             lineList2 = line.rstrip().split()
-            out_list = [lineList1[2], lineList1[5], lineList2[0], lineList2[4], lineList2[5]]
+            out_list = [lineList1[2], lineList1[5], lineList2[0], float(lineList2[4]), float(lineList2[5])]
             o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
     o1h.close()
 
