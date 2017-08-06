@@ -1,5 +1,3 @@
-from pybedtools import *
-from pyfaidx import Fasta
 import numpy as np
 import subprocess, os, shutil, sys
 import glob
