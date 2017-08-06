@@ -5,12 +5,11 @@ from shutil import copyfile
 import stat
 
 def unout2table(unout):
-    unout = open(unout, 'r')
-
-    unoutprefix = unout[:unout.rfind('.')]
-    o1 = unoutprefix + '.tab.txt'
-    o1h = open(o1, 'w')
-    for line in unout:
+    f = unout.rstrip()
+    outFileName = f[:f.rfind('.')]+'.tab.txt'
+    input = open(f, 'r')
+    o1h = open(outFileName, 'w')
+    for line in input:
         if not '[' in line:
             lineList = (line.split()).rstrip()
             out_list = [lineList[3], lineList[6], lineList[7], lineList[11], lineList[12]]
