@@ -11,7 +11,7 @@ def unout2table(unout):
     o1h = open(outFileName, 'w')
     for line in input:
         if not '[' in line:
-            line = line.rstrip()
+            line = line.strip()
             lineList1 = line.split(',')
             lineList2 = line.split('\t')
             out_list = [lineList1[2], lineList1[5], lineList2[0], float(lineList2[4]), float(lineList2[5])]
