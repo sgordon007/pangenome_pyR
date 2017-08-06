@@ -3,6 +3,7 @@ import subprocess, os, shutil, sys
 import glob
 from shutil import copyfile
 import stat
+import re
 
 def unout2table(unout):
     f = unout.rstrip()
@@ -13,9 +14,16 @@ def unout2table(unout):
         if not '[' in line:
             line = line.strip()
             lineList1 = line.split(',')
-            lineList2 = line.split('\t')
-            out_list = [lineList1[2], lineList1[5], lineList2[0], float(lineList2[4]), float(lineList2[5])]
-            print '\t'.join(map(lambda x: ' $' + str(x), out_list))
+            g1 = lineList1[2]
+            g2 = lineList1[5].split('\t')[0]
+            print g1
+            print g2
+
+            # lineList2 = line.split('\t')
+            # re.findall(r"[\w']+", DATA)
+
+            # out_list = [lineList1[2], lineList1[5], lineList2[0], float(lineList2[4]), float(lineList2[5])]
+            # print '\t'.join(map(lambda x: ' $' + str(x), out_list))
             # o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
     o1h.close()
 
