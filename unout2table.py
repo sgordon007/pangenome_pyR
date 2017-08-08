@@ -14,9 +14,11 @@ def unout2table(unout):
         if not '[' in line:
             line = line.strip()
             lineList1 = line.split(',')
-            g1 = lineList1[2].rstrip('.')
+            g1 = lineList1[2]
+            g1pre = re.search('From', 'From Here to Eternity')
             g2 = lineList1[5].split('\t')[0]
             print g1
+            print g1pre
             print g2
 
             # lineList2 = line.split('\t')
