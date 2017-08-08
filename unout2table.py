@@ -14,7 +14,7 @@ def unout2table(unout):
         if not '[' in line:
             line = line.strip()
             lineList1 = line.split(',')
-            g1 = lineList1[2]
+            g1 = lineList1[2].split('.')
             g2 = lineList1[5].split('\t')[0]
             print g1
             print g2
