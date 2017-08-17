@@ -13,6 +13,7 @@ def modclust_id(pan_matrix_f):
     inputFile = open(f, 'r')
     for line in inputFile:
         line = line.split()
+        # pref_id = line[0].rstrip('.fna')
         pref_id = line[0].rstrip('.fna')
         indices = [x.start() for x in re.finditer("_", pref_id)]
         # part1 = pref_id[0:indices[occur - 1]]

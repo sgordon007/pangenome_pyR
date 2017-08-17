@@ -15,18 +15,16 @@ def unout2table(unout):
             line = line.strip()
             lineList1 = line.split(',')
             g1 = lineList1[2]
-            g1pre = re.search('From', 'From Here to Eternity')
+            g1pre = g1[:re.search('.\d$', g1).start()]
             g2 = lineList1[5].split('\t')[0]
-            print g1
-            print g1pre
-            print g2
-
-            # lineList2 = line.split('\t')
-            # re.findall(r"[\w']+", DATA)
-
-            # out_list = [lineList1[2], lineList1[5], lineList2[0], float(lineList2[4]), float(lineList2[5])]
-            # print '\t'.join(map(lambda x: ' $' + str(x), out_list))
-            # o1h.write('%s\t%s\t%s\t%d\t%d\n' % (out_list))
+            lineList2 = line.split('\t')
+            query = lineList2[1].split(':')[0]
+            bait = lineList2[1].split(':')[1]
+            # print g1
+            # print g1pre
+            # print g2
+            out_list = [g1pre, g2, query, bait, float(lineList2[4]), float(lineList2[5])]
+            o1h.write('\t'.join(map(lambda x: str(x), out_list)) + '\n')
     o1h.close()
 
 ########## end of initial analysis
