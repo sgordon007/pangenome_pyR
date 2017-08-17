@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 import re
 
-pan_matrix_f = '/Users/sgordon/Documents/distachyon50/pangenome_R/data/pangenome_matrix_t0.tab.rotated.txt'
+# pan_matrix_f = '/Users/sgordon/Documents/distachyon50/pangenome_R/data/pangenome_matrix_t0.tab.rotated.txt'
+pan_matrix_f = 'pangenome_genes_not_in_Bd21.75.headers'
+
 occur = 1
 
 def modclust_id(pan_matrix_f):
